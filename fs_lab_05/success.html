@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ANITS Home</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .header{
+            text-align: center;
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar {
+    background-color: #004080;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 8px 12px;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: #004080;
+    border-radius: 5px;
+}
+
+        .success{
+            text-align: center;
+            color: green;
+            margin-top: 30px;
+        }
+
+        .notes{
+            width: 60%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        li{
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body >
+        
+
+
+    <div class="header">
+        <h1>Anil Neerukonda Institute of Technology</h1>
+        <p>ANITS Placement Portal</p>
+    </div>
+
+            <div align = "center">
+            <nav class = "navbar">
+        <a href = "index.html" target="_blank">Home</a>
+        <a href = "register.html" target="_blank">Register</a>
+        <a href = "login_page.html" target="_blank">Login</a>
+        <a href = "success.html" target="_blank">Companies</a>
+        <a href = "contact.html" target="_blank">Contact us</a>
+        <a href = "about.html" target="_blank">About</a>
+    </nav>
+</div>
+
+
+    <div class="success">
+        <h2>Login Successful!</h2>
+    </div>
+
+    <h3 align = "center" id = "datetime"></h3>
+
+
+    <div class="notes">
+
+        <h3>Important Notes:</h3>
+
+        <ul>
+            <li>Register for placement drives before the deadline.</li>
+            <li>Keep your resume updated.</li>
+            <li>Maintain required academic criteria.</li>
+            <li>Carry your college ID during interviews.</li>
+            <li>Check company notifications regularly.</li>
+        </ul>
+
+    </div>
+    <script>
+        setInterval(function(){
+            let datetime = new Date();
+            let currenttime = datetime.toLocaleString();
+            document.getElementById("datetime").innerHTML = "Login Time : "+currenttime;
+        },1000);
+
+
+        // setTimeout(function(){
+        //     alert("session expired.Redirecting to login page")
+        //     window.location.href = "login_page.html"
+
+        // },10000);
+        let timer;
+
+        function timeout(){
+            timer = setTimeout(function(){
+                alert("session expired.Redirecting to login page")
+                window.location.href = "login.html"
+
+            },10000);
+        }
+
+        timeout();
+
+         document.addEventListener("mousemove",clear);
+         document.addEventListener("scroll",clear);
+         document.addEventListener("click",clear);
+         document.addEventListener("keydown",clear);
+
+         function clear(){
+            clearTimeout(timer);
+            timeout();
+         }
+    </script>
+
+
+</body>
+</html>

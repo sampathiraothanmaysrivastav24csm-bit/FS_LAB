@@ -1,0 +1,423 @@
+/* =========================================================
+   ANITS Placement Portal - style.css
+   Basic, clean layout with small UI/UX polish
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #2c3e50;
+  --navy-dark: #1a252f;
+  --slate: #34495e;
+  --accent: #3498db;
+  --green: #2c9e5b;
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --border: #e1e5ea;
+  --text: #333333;
+  --text-light: #6b7280;
+  --radius: 8px;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header .logo {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header .titles h1 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.header .tagline {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #b9c6d4;
+  margin-top: 2px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: var(--slate);
+  padding: 6px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: var(--shadow);
+}
+
+.navbar a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  margin: 4px 2px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ================= VIDEO / MARQUEE ================= */
+.parent {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.parent-video {
+  max-width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+marquee {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 10px 0;
+  margin-top: 18px;
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+}
+
+/* ================= STAT CARDS ================= */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px 16px 44px;
+}
+
+.cards {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 26px;
+  text-align: center;
+  min-width: 160px;
+  flex: 1 1 180px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.cards h2 {
+  color: var(--navy);
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.cards p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ================= MAIN CONTENT AREA ================= */
+main, .content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px 50px;
+}
+
+h1, h2 {
+  color: var(--navy);
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+ul {
+  margin: 10px 0 16px 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* ================= FORMS ================= */
+form {
+  max-width: 700px;
+  margin: 20px auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px 30px;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 22px;
+  padding: 16px 18px;
+}
+
+legend {
+  padding: 0 8px;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 9px 6px;
+}
+
+label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="url"],
+input[type="search"],
+input[type="file"],
+select,
+textarea {
+  padding: 8px 10px;
+  border: 1px solid #c7ccd3;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 260px;
+  background: #fbfcfd;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  background: #ffffff;
+}
+
+textarea {
+  max-width: 260px;
+  resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"],
+.btn {
+  background: var(--navy);
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 12px 6px 0 0;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+input[type="submit"]:hover,
+.btn:hover {
+  background: var(--navy-dark);
+  transform: translateY(-2px);
+}
+
+input[type="reset"] {
+  background: #e5e8ec;
+  color: var(--text);
+}
+
+input[type="reset"]:hover {
+  background: #d3d8de;
+}
+
+/* ================= LOGIN PAGE ================= */
+.login-box {
+  max-width: 400px;
+  margin: 40px auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px 34px;
+  text-align: center;
+}
+
+/* ================= COMPANIES PAGE ================= */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.company-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.company-card h2 {
+  font-size: 1.1rem;
+}
+
+.company-card img {
+  width: 80px;
+  height: 55px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+
+table[border] {
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+table[border] th {
+  background: var(--navy);
+  color: #ffffff;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+table[border] td {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+}
+
+table[border] tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* ================= SUCCESS PAGE ================= */
+.success-box {
+  max-width: 500px;
+  margin: 50px auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--green);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px;
+  text-align: center;
+}
+
+.success-box h2 {
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+/* ================= CONTACT PAGE ================= */
+iframe {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 100%;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--navy);
+  color: #b9c6d4;
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 30px;
+  font-size: 0.85rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+
+  .navbar a {
+    display: inline-block;
+  }
+
+  table td {
+    display: block;
+    width: 100%;
+  }
+}

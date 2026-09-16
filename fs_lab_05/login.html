@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANITS</title>
+    <link rel = "stylesheet" href = style.css>
+    
+</head>
+<body>
+    <div class = "header" align  = "center">
+        <h1>Anil neerkonda Institute of technology</h1>
+        <h3 strong>Anits-placement portal</h3>
+    </div>
+    <div class = "loginpage">
+        <label>UserName :</label><br>
+        <input type = "text" id = "name" placeholder="Enter your name">
+        <br>
+        <label>Password :</label><br>
+        <input type = "password" id = "pass" placeholder="Enter your password">
+        <br>
+        <button onclick="loginvalidate()">Login</button>
+
+
+    <script>
+function loginvalidate() {
+
+    let username = document.getElementById("name").value;
+    let password = document.getElementById("pass").value;
+
+    if (username === "admin" && password === "1234") {
+        alert("login successfull")
+        window.location.href = "success.html";
+
+    } else {
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+</body>
+</html>
+
+
+
+
+

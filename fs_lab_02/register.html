@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANITS - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.jpeg" class="logo" alt="logo">
+        <div class="titles">
+            <h1>ANIL NEERKONDA INSTITUTE OF TECHNOLOGY</h1>
+            <p class="tagline">ANITS Campus Placement Portal</p>
+        </div>
+    </div>
+
+    <div align="center">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="companies.html">Companies</a>
+            <a href="contact.html">Contact us</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+    <hr>
+
+    <h1 align="center">Student Registration Form</h1>
+
+    <form action="success.html" method="get">
+        <fieldset>
+            <legend><strong>Personal Information</strong></legend>
+            <table border="0">
+                <tr>
+                    <td><label for="name">Full Name</label></td>
+                    <td>: <input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="word">Password</label></td>
+                    <td>: <input type="password" name="password" id="word"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address</label></td>
+                    <td>: <input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number</label></td>
+                    <td>: <input type="tel" name="phone" id="phone"></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td>: <input type="number" name="age" id="age"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth</label></td>
+                    <td>: <input type="date" name="dob" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="time">Preferred Time</label></td>
+                    <td>: <input type="time" name="time" id="time"></td>
+                </tr>
+                <tr>
+                    <td><label for="date_time">Registered Date &amp; Time</label></td>
+                    <td>: <input type="datetime-local" name="date_time" id="date_time"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Academic Information</strong></legend>
+            <table border="0">
+                <tr>
+                    <td><label for="dept">Department</label></td>
+                    <td>:
+                        <select id="dept" name="dept">
+                            <option value="">--Select Department</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ece">Electronics</option>
+                            <option value="c">Civil</option>
+                            <option value="m">Mechanical</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lang">Programming Language</label></td>
+                    <td>: <input type="text" name="lang" id="lang"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>:
+                        <input type="radio" name="gender" id="female" value="Female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" name="gender" id="male" value="Male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" name="gender" id="others" value="Others">
+                        <label for="others">Others</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Skills</label></td>
+                    <td>:
+                        <input type="checkbox" name="skills" value="java" id="java">
+                        <label for="java">Java</label>
+
+                        <input type="checkbox" name="skills" value="c" id="c">
+                        <label for="c">C</label>
+
+                        <input type="checkbox" name="skills" value="python" id="py">
+                        <label for="py">Python</label>
+
+                        <input type="checkbox" name="skills" value="html" id="html">
+                        <label for="html">HTML</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Online Information</strong></legend>
+            <table border="0">
+                <tr>
+                    <td><label for="portfolio">Portfolio Website</label></td>
+                    <td>: <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="search_course">Search Course</label></td>
+                    <td>: <input type="search" id="search_course" name="search_course" placeholder="Type course name..."></td>
+                </tr>
+                <tr>
+                    <td><label for="resume">Upload Resume</label></td>
+                    <td>: <input type="file" id="resume" name="resume"></td>
+                </tr>
+                <tr>
+                    <td><label for="fav_color">Fav Colour</label></td>
+                    <td>: <input type="color" id="fav_color" name="fav_color"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td>: <textarea id="address" name="address" rows="4" cols="22"></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Declaration</strong></legend>
+            <table border="0">
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="declare" name="declaration" value="agreed" required>
+                        <label for="declare">I hereby declare that the information provided above is true and correct.</label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <div class="footer">
+        <p>&copy; 2026 ANITS | Department of Training &amp; Placement</p>
+    </div>
+
+</body>
+</html>
